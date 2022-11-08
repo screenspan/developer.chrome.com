@@ -107,15 +107,25 @@ export class WebTabs extends BaseElement {
       return 0;
     }
 
-    return Array.from(this.children).indexOf(tab);
+    return Array.from(this.children)
+      .filter(e => e.nodeName === 'WEB-TAB')
+      .indexOf(tab);
   }
 
   render() {
-    this._tabPanels = Array.from(this.children);
+    this._tabPanels = Array.from(this.children).filter(
+      e => e.nodeName === 'WEB-TAB'
+    );
+
+    const header = Array.from(this.children).filter(
+      e => e.nodeName === 'WEB-TABS-INTERLUDE'
+    );
+
     const tabs = this._formatTabs();
+
     return html`
       <div role="tablist">${tabs}</div>
-      ${this._tabPanels}
+      ${header} ${this._tabPanels}
     `;
   }
 }
