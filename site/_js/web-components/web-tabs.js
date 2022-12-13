@@ -113,19 +113,17 @@ export class WebTabs extends BaseElement {
   }
 
   render() {
-    this._tabPanels = Array.from(this.children).filter(
-      e => e.nodeName === 'WEB-TAB'
-    );
+    const children = Array.from(this.children);
 
-    const header = Array.from(this.children).filter(
-      e => e.nodeName === 'WEB-TABS-INTERLUDE'
-    );
+    this._tabPanels = children.filter(e => e.nodeName === 'WEB-TAB');
+
+    const interlude = children.filter(e => e.nodeName === 'WEB-TABS-INTERLUDE');
 
     const tabs = this._formatTabs();
 
     return html`
       <div role="tablist">${tabs}</div>
-      ${header} ${this._tabPanels}
+      ${interlude} ${this._tabPanels}
     `;
   }
 }
