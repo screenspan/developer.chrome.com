@@ -1,7 +1,7 @@
 # developer.chrome.com
 
 developer.chrome.com is the ultimate resource for developers of all backgrounds
-to learn about what's new in Chrome!
+to learn about what is new in Chrome!
 
 ## Found a bug? 👷‍♀️
 
