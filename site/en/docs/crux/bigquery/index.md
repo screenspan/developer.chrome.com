@@ -208,7 +208,7 @@ The `metrics_summary` table contains summary statistics for each origin and each
 
 ### device_summary {: #schema-device-summary }
 
-The `device_summary` table contains aggregated statistics by month, origin, country and device. In addition to the `metrics_summary` columns there is:
+The `device_summary` table contains aggregated statistics by month, origin and device. In addition to the `metrics_summary` columns there is:
 
 `device`
  : Device [form factor](/docs/crux/methodology/#form-factor-dimension)
